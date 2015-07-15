@@ -1,0 +1,6 @@
+C:\Users\ahu1\Desktop\shape\shape\bin\Debug\shape.exe.config
+C:\Users\ahu1\Desktop\shape\shape\obj\Debug\shape.csprojResolveAssemblyReference.cache
+C:\Users\ahu1\Desktop\shape\shape\bin\Debug\shape.exe
+C:\Users\ahu1\Desktop\shape\shape\bin\Debug\shape.pdb
+C:\Users\ahu1\Desktop\shape\shape\obj\Debug\shape.exe
+C:\Users\ahu1\Desktop\shape\shape\obj\Debug\shape.pdb
