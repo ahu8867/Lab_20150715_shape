@@ -87,13 +87,40 @@ namespace shape
             List<ThreeDim> threedim = new List<ThreeDim>();
             while (true)
             {
+                Console.WriteLine("도형종류 : Triangle, Square, Circle, Cube, Sphere");
+                double number;
                 Console.Write("단위 크기 : ");
-                double number = Double.Parse(Console.ReadLine());
+                try
+                {
+                    number = Double.Parse(Console.ReadLine());
+                    if (number<=0)
+                    {
+                        Console.WriteLine("잘못된 범위의 값을 입력하였습니다.");
+                        continue;
+                    }
+                }
+                catch (System.FormatException x)
+                {
+                    Console.WriteLine(x.Message);
+                    continue;
+                }
+                catch (SystemException y)
+                {
+                    Console.WriteLine(y.Message);
+                    continue;
+                }
+
                 Console.Write("모양 : ");
+
                 string whatShape = Console.ReadLine();
                 int count = 0;
                 int i = 0;
-                if (whatShape == "Triangle")
+                if (whatShape != "Triangle" && whatShape != "Square" && whatShape != "Circle"&&whatShape!="Cube"&&whatShape!="Sphere")
+                {
+                    Console.WriteLine("없는 도형입니다.");
+                    continue;
+                }
+                else if (whatShape == "Triangle")
                 {
                     TwoDim tri = new Triangle();
                     foreach (var item in twodim)
@@ -170,7 +197,7 @@ namespace shape
                     ThreeDim cub = new Cube();
                     foreach (var item in threedim)
                     {
-                        if (threedim[i].numThree==number&&threedim[i].typeThree==6)
+                        if (threedim[i].numThree == number && threedim[i].typeThree == 6)
                         {
                             Console.WriteLine("이미 담은 도형입니다.");
                             count += 1;
@@ -215,3 +242,4 @@ namespace shape
         }
     }
 }
+
